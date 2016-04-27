@@ -5,7 +5,7 @@ angular.module('app', ['directives'])
     
     self.current = null;
     
-    vkGetMusic.then(function(vkSession) {
+    vkGetMusic.then(function(vkSession, musicDb) {
         console.log('Audiolist:Got session and music!');
     });
     
