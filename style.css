@@ -1,0 +1,47 @@
+body {
+  font-family: 'arial';
+  font-size: 12px;
+}
+.block {
+  width: 50%;
+  float: left;
+}
+.block .content {
+  background: #aaa;
+  margin: 5px;
+}
+.block :nth-of-type(2n):after {
+  content: '';
+  clear: both;
+}
+.audiolist {
+  background: #eee;
+}
+.audiolist .group .title,
+.audiolist .group a {
+  display: block;
+  padding: 2px 5px;
+  color: #fefefe;
+}
+.audiolist .group .title:hover,
+.audiolist .group a:hover,
+.audiolist .group .title.active,
+.audiolist .group a.active {
+  background: #333;
+}
+.audiolist .group a {
+  padding-left: 15px;
+}
+.audiolist .group nav {
+  display: none;
+}
+.audiolist .group .title.active + nav {
+  display: block;
+}
+.audiolist a {
+  background: #aaa;
+  color: #fefefe;
+}
+.audiolist a:hover {
+  background: #333;
+}

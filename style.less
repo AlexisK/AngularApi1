@@ -1,0 +1,61 @@
+@white: #fefefe;
+@black: #111;
+
+@grey: #aaa;
+@greyLight: #eee;
+@greyDark: #333;
+@color: #a4e;
+@colorLight: #a8e;
+@colorDark: #333;
+
+
+body {
+    font-family: 'arial';
+    font-size: 12px;
+}
+
+
+.block {
+    width: 50%;
+    float: left;
+    
+    .content {
+        background: @grey;
+        margin: 5px;
+    }
+    :nth-of-type(2n):after {
+        content: '';
+        clear: both;
+    }
+}
+
+
+.audiolist {
+    background: @greyLight;
+    
+    .group {
+        
+        .title, a {
+            display: block;
+            padding: 2px 5px;
+            
+            color: @white;
+            
+            &:hover,
+            &.active { background:@greyDark; }
+        }
+        
+        a { padding-left: 15px; }
+        
+        nav { display:none; }
+        .title.active + nav { display: block; }
+    }
+    
+    a {
+        background: @grey;
+        color: @white;
+        &:hover { background:@greyDark; }
+    }
+}
+
+
